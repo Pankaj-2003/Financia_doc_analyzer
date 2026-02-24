@@ -7,6 +7,9 @@ import os
 import sys
 import io
 
+# Add the project directory to sys.path so Celery workers can find local modules like 'database.py'
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 # Force UTF-8 encoding for Windows console
 if sys.stdout and getattr(sys.stdout, "buffer", None):
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
