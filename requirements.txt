@@ -1,0 +1,17 @@
+# Keep crewai at version 0.130.0
+# Other package versions are flexible and can be changed
+crewai==0.130.0 
+fastapi
+python-multipart
+uvicorn
+langchain-community
+langchain-openai
+pypdf
+python-dotenv
+pydantic-settings
+
+# Queue Worker (Celery + Redis)
+celery[redis]
+
+# Database (MongoDB)
+pymongo
